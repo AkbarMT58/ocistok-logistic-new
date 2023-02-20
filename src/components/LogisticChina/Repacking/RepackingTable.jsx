@@ -35,6 +35,8 @@ export default function RepackingTable() {
     const params = new URLSearchParams({ limit, page, id }).toString();
     const data = await getRepackingData(params);
 
+    console.log("lihat data all :".data)
+
     if (data) {
       const newFormat = [];
       for (let i = 0; i < data.data.data.customer.collection.length; i++) {

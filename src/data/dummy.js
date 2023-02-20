@@ -503,6 +503,11 @@ export const links = [
         name: 'ARRIVED IDN ',
         icon: <RiContactsLine />,
       },
+      {
+        name: 'Employees ',
+        icon: <RiContactsLine />,
+      },
+     
      
     ],
   },
