@@ -488,7 +488,7 @@ export const links = [
         icon: <AiOutlineShoppingCart />,
       },
       {
-        name: 'Send To IDN',
+        name: 'SendToIDN',
         icon: <IoMdContacts />,
       },
       {
@@ -503,10 +503,7 @@ export const links = [
         name: 'ARRIVED IDN ',
         icon: <RiContactsLine />,
       },
-      {
-        name: 'Employees ',
-        icon: <RiContactsLine />,
-      },
+     
      
      
     ],

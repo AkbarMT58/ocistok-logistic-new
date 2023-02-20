@@ -1,8 +1,12 @@
-import { useHistory } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 const Redirect = (path) => {
-  const history = useHistory();
-  return history.push(path);
+  //return redirect(path);
+
+  return  <Navigate to="/dashboard" replace={true} />
+
+  
 };
+
 
 export default Redirect;

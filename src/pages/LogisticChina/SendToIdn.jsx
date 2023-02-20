@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import Container from 'components/Layout/Container';
-import Navbar from 'components/Layout/Navbar';
-import SearchBar from 'components/Layout/SearchBar';
-import Sidebar from 'components/Layout/Sidebar';
-import SendToIdnTable from 'components/LogisticChina/SendToIdn/SendToIdnTable';
+// import Container from 'components/Layout/Container';
+// import Navbar from 'components/Layout/Navbar';
+// import SearchBar from 'components/Layout/SearchBar';
+// import Sidebar from 'components/Layout/Sidebar';
+import SendToIdnTable from '../../components/LogisticChina/SendToIdn/SendToIdnTable';
 import { getSendToIdnData } from 'service/api';
 import SearchModal from 'components/LogisticChina/SendToIdn/SearchModal';
 import { useLocation } from 'react-router-dom';

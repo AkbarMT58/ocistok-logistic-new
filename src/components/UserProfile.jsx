@@ -1,13 +1,37 @@
 import React from 'react';
 import { MdOutlineCancel } from 'react-icons/md';
 
+import { Navigate } from "react-router-dom";
+
 import { Button } from '.';
 import { userProfileData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 import avatar from '../data/avatar.jpg';
 
+
 const UserProfile = () => {
   const { currentColor } = useStateContext();
+
+  
+  const logoutHandler = () => {
+    console.log('haiiii')
+    swal({
+      text: 'Are you sure want to logout?',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+      
+      
+      //  <Navigate to={"/login "} replace={true} />
+
+       localStorage.clear();
+       window.location.href = '/login';
+
+      }
+    });
+  };
 
   return (
     <div className="nav-item absolute right-1 top-16 bg-white dark:bg-[#42464D] p-8 rounded-lg w-96">
@@ -52,17 +76,21 @@ const UserProfile = () => {
         ))}
       </div>
       <div className="mt-5">
-        <Button
-          color="white"
-          bgColor={currentColor}
-          text="Logout"
-          borderRadius="10px"
-          width="full"
-        />
+        <button
+          type="button"
+          style={{ 
+            backgroundColor: currentColor, 
+            color: 'white', 
+            borderRadius: 10 }}
+          className={` text-lg p-3 w-full hover:drop-shadow-xl`}
+          onClick={logoutHandler}
+        >
+          Logout
+        </button>
       </div>
     </div>
 
   );
 };
-
 export default UserProfile;
+
