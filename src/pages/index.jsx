@@ -18,5 +18,6 @@ export { default as Stacked } from './Charts/Stacked';
 
 export { default as Repacking } from '../pages/LogisticChina/Repacking';
 //export { default as SendToIDN } from '../pages/LogisticChina/SendToIdn'
+export { default as Layout_mode } from '../components/layout_design/Layout_mode';
 
 
